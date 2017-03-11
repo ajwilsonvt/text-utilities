@@ -9,6 +9,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Extracts word and definition and creates a plain
+ * text file delimited by a single tab character.
+ */
 public class Extract {
 	
 	private Boolean empty;
@@ -85,7 +89,7 @@ public class Extract {
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter pw = new PrintWriter(bw);
 	    
-			map.forEach((k,v) -> pw.println(k+","+v));
+			map.forEach((k,v) -> pw.println(k+"\t"+v));
 	
 		    pw.close();
 		    System.out.println("Done!");
